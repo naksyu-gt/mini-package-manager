@@ -30,3 +30,10 @@ export type NpmManifest = {
     }
   >;
 };
+
+export type ResolvedPackageInfo = {
+  version: Version;
+  url: string;
+  shasum?: string;
+  dependencies: DependenciesMap;
+};
