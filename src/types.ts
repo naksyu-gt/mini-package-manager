@@ -37,3 +37,11 @@ export type ResolvedPackageInfo = {
   shasum?: string;
   dependencies: DependenciesMap;
 };
+
+export type LockFile = Record<string, ResolvedPackageInfo>;
+
+export type ConflictedPackageInfo = {
+  name: PackageName;
+  version: Version;
+  parent: PackageName;
+};
